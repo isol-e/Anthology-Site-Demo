@@ -1,0 +1,420 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  height: 100%
+}
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #EFEFEF;
+  text-shadow: 0px 0px 2px black;
+}
+#container-fluid {
+  height: 100%;
+}
+.full-screen {
+  min-height: 100%; /* makes panels the entire window height */
+}
+#scrollContent {
+  min-height: 100%;
+}
+
+.main {
+	background-color: #F78E8E;
+}
+.blue {
+	background-color: #94b9c7;
+}
+.purple {
+	background-color: #eddafb;
+}
+.grey {
+  background-color: #ECECEC;
+}
+
+/*********Loader START**********/
+#loaderPrep{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: black;
+  animation-name: loadOut;
+  animation-duration: 1.3s;
+  animation-delay: 6.3s;
+  animation-fill-mode: forwards;
+}
+@media (min-width: 700px) {
+  #loader {
+    z-index: 1000;
+    position: absolute;
+    margin: auto;
+  	left: 0;
+  	top: 0;
+    bottom: 0;
+    right: 0;
+  	width: 600px;
+  	height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 25px;
+    color: white;
+    font-size: 25px;
+    text-shadow: 0px 0px 2px red;
+    animation-name: loadIn;
+    animation-duration: 7.8s;
+    animation-timing-function: cubic-bezier(0,.93,.56,.97);
+    animation-fill-mode: forwards;
+  }
+}
+@media (max-width: 700px) {
+  #loader {
+    margin: 150px 0px 0px 20px;
+    z-index: 1000;
+    text-align: center;
+    vertical-align: middle;
+    width: 300px;
+    height: 450px;
+    color: white;
+    font-size: 22px;
+    text-shadow: 0px 0px 2px red;
+    animation-name: loadIn;
+    animation-duration: 7.8s;
+    animation-timing-function: cubic-bezier(0,.93,.56,.97);
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes loadIn {
+  0% {
+    opacity: 0;
+    transform: scale(2, 2);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.09, 1.09);
+  }
+}
+@keyframes loadOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.85;
+    transform: scale(1, 0);
+  }
+}
+/**********Loader END**********/
+
+/*Hide header if on mobile*/
+@media (max-width: 700px) {
+  header, #tweet {
+    display: none;
+  }
+  header p {
+    display: none;
+  }
+}
+header {
+	height: 30px;
+  background-color: black;
+  color: grey;
+	border-bottom: 0.5px solid white;
+  position: fixed;
+  top: 0;
+  display:block;
+  width: 100%;
+  z-index:9;
+}
+header p {
+	padding-top: 7px;
+}
+#tweet {
+	float: right;
+	padding-top: 5px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  z-index:9;
+  display: block;
+  width: 100%;
+  background: black;
+  height: 53px;
+  border-top: 0.5px solid white;
+}
+#socialMedia {
+  text-align: center;
+}
+#socialMedia {
+  padding-top: 4px;
+}
+#socialMedia .icons {
+  padding-top: 3px;
+  color: grey;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	font-size: 20px;
+  border: 2px solid grey;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  box-shadow: 3px 3px 5px #888;
+  margin-right: 6px;
+  transition: all 0.3s ease-in-out;
+}
+#socialMedia .icons:hover {
+  border: 2px solid #00aced;
+  color: #00aced;
+  box-shadow: 3px 3px 5px #00aced;
+}
+#pixiv {
+  font-family: "PT Serif";
+  font-style: italic;
+  margin-top: -4px;
+}
+/**********Header and footer content END*************/
+
+/***********Navbar START***********/
+ul {
+ list-style: none;
+}
+@media (min-width: 600px) {
+  #navMobile {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  #navDesktop {
+    display: none;
+  }
+  .navbar-brand {
+    font-family: "Kaushan Script";
+    font-size: 25px;
+  }
+}
+#navBar {
+  position: fixed;
+  margin-top: 40px;
+  font-family: "Kaushan Script";
+  font-size: 48px;
+  z-index: 99;
+}
+#navBar li {
+  padding-bottom: 8px;
+}
+#navBar a {
+  color: white;
+  list-style-type: none;
+  text-shadow: 1px 2px 8px black;
+  transition: all 0.5s ease-in-out;
+}
+#navBar a:hover, .active {
+  text-shadow: 3px 4px 10px black;
+  font-size: 120%;
+  z-index: 3;
+}
+/************Navbar END***********/
+
+#about, #members, #contact {
+  font-family: "Kaushan Script";
+}
+#members {
+  padding-bottom: 10px;
+}
+@media (max-width: 700px) {
+  #member {
+    margin-left: 90px;
+  }
+}
+#siteUpdates {
+   background-color: rgba(0, 0, 0, 0.7);
+   height: 150px;
+   width: 750px;
+   border: 1px solid white;
+   margin-left: 50px;
+   overflow-y: scroll;
+ }
+#siteUpdates p {
+  font-family: "Kaushan Script";
+  font-size: 23px;
+}
+ #siteUpdates dl {
+   padding-left: 10px;
+   padding-right: 5px;
+ }
+ #siteUpdates dt, dd {
+   text-align: left;
+ }
+@media (max-width: 700px) {
+  #siteUpdates {
+    width: 100%;
+    margin: 0px 10px 0px 5px;
+  }
+}
+#anthologyDetails {
+  font-size: 20px;
+  text-shadow: 0px 0px 2px black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+#member {
+  position: relative;
+  float: left;
+  padding: 0px 10px 10px 0px;
+  animation-name: fadeIn;
+  animation-fill-mode
+}
+#member img {
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px black;
+  transition: all 0.5s ease-in-out;
+}
+#member #memberInfo {
+  opacity: 0;
+  display: block;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+#member #memberInfo h2, h3 {
+  font-family: "MS Mincho";
+  font-weight: bold;
+  text-shadow: 0px 0px 4px black;
+}
+#member #memberInfo:hover {
+  opacity: 1;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.78);
+  color: #242424;
+}
+#memberSites {
+  padding-top: 5px;
+}
+#memberSites .icons {
+  padding-top: 3px;
+  color: #242424;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	font-size: 20px;
+  border: 2px solid #242424;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 6px;
+  box-shadow: 0px 0px 3px black;
+  transition: all 0.3s ease-in-out;
+}
+#memberSites .icons:hover {
+  border: 2px solid black;
+  box-shadow: 3px 3px 3px black;
+  transform: translate(-8%, -8%) rotate(360deg);
+}
+h4 {
+  color: black;
+  text-shadow: 1px 1px 2px black;
+}
+#switch {
+  font-size: 20px;
+  font-family: "PT Serif";
+  color: black;
+  height: 100%;
+  vertical-align: middle
+}
+#switch:hover {
+  font-size: 0;
+}
+#switch:hover:before {
+	font-size: 20px;
+	content: attr(data-hover);
+}
+#contactInfo {
+  padding-bottom: 20px;
+}
+form {
+  padding-bottom: 65px;
+  width: 100%;
+}
+.btn {
+  background-color: #85969c;
+  border-color: #dfe8ee;
+  color: #fff;
+}
+.btn:hover {
+  background-color: #a4b9c1;
+  border-color: #85969c;
+}
+.btn.round {
+	border-radius: 24px;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  form {
+    margin: 0px 10px 0px 20px;
+    width: 100%;
+  }
+}
+
+/*Scroll stuff. Disabled when in mobile for now (prbly forever)*/
+#kara {
+  position: absolute;
+  bottom: 40px;
+  right: 50px;
+}
+#ichi {
+  position: absolute;
+  bottom: 40px;
+  left: 150px;
+}
+#ichi2 {
+  position: absolute;
+  bottom: 40px;
+}
+#keepOut {
+  opacity: 0;
+  position: absolute;
+  bottom: 80px;
+  right: 70px;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1.7px solid black;
+  text-align: center;
+  font-family: "Kaushan Script";
+  padding-top: 40px;
+  background-color: #E6E60C;
+  color: black;
+}
+#keepOut .fa-paw {
+  font-size: 50px;
+}
+@media (max-width: 700px) {
+  #kara, #ichi, #ichi2, #keepOut {
+    display: none;
+  }
+}

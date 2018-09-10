@@ -1,0 +1,314 @@
+-<!--jquery and TweenMax-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+
+<!--Scrollmagic-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
+
+<!--Bootstrap and fonts-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<a id="top"></a>
+
+<!--Loading page-->
+<div id="loaderPrep">
+  <div id="loader">
+    <p>こちらはアンソロジー企画の告知サイトです。</p>
+    <p>公式及び各関係者様とは一切関係ございません。</p>
+  </div>
+</div>
+
+<header class="container-fluid">
+  <div class="col-sm-11">
+    <p>公式及び各関係者様とは一切関係ございません。
+  </div>
+  <div class="col-sm-1">
+    <div id="tweet">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-text="Testing" data-via="#">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </div>
+  </div>
+</header>
+
+<!--Footer-->
+<footer class="container-fluid">
+    <div id="socialMedia">
+      <a href="#" class="icons"><i class="fa fa-twitter"></i></a>
+      <a href="#" class="icons"><div id="pixiv">p</div></a>
+    </div>
+</footer>
+
+<!--Main Navigation-->
+<div id="navDesktop">
+  <ul id="navBar" class="nav-stacked">
+    <li><a href="#top">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#members">Members</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+<div id="navMobile">
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#top">Title</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#members">Members</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div id="container-fluid">
+<section class="full-screen main" id="indexPage">
+  <div id="scrollContent">
+    <h1 id="logo"><br>Logo</h1>
+    <span style="display:block; height: 350px;"></span>
+    <div id="siteUpdates">
+      <dl class="dl-horizontal">
+        <p>News</p>
+          <dt>2018/04/15</dt>
+            <dd>執筆陣を更新しました</dd>
+          <dt>2018/03/26</dt>
+            <dd>サイトを公開しました</dd>
+      </dl>
+    </div>
+    <img id="ichi" src="https://i.imgur.com/VXfeG6y.png">
+    <img id="kara" src="https://i.imgur.com/VXfeG6y.png">
+    <img id="ichi2" src="https://i.imgur.com/VXfeG6y.png">
+    <div id="keepOut"> <!--Dumping this here so I don't go crazy looking for it-->
+      <h3>KEEP OUT</h3>
+      <i class="fa fa-paw" aria-hidden="true"></i>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="full-screen blue">
+  <div>
+    <h1>About</h1>
+    <table id="anthologyDetails">
+      <tr>
+        <td><b>タイトル</b></td>
+        <td> 未定</td>
+      </tr>
+      <tr>
+        <td><b>サイズ</b></td>
+        <td> A5</td>
+      </tr>
+      <tr>
+        <td><b>ページ数</b></td>
+        <td> 未定</td>
+      </tr>
+      <tr>
+        <td><b>価格</b></td>
+        <td> 未定</td>
+      </tr>
+      <tr>
+        <td><b>発行日</b></td>
+        <td> 未定</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<section id="members" class="full-screen purple">
+  <div id="memberIcons">
+    <h1>Members</h1><br>
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="member">
+          <img class="img-responsive" src="https://via.placeholder.com/150x150">
+          <div id="memberInfo">
+            <h2>Name</h2>
+            <h3>（漫画）</h3>
+            <div id="memberSites">
+              <a href="#" class="icons"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="icons"><div id="pixiv">p</div></a>
+            </div>
+          </div>
+        </div>
+        <div id="member">
+          <img class="img-responsive" src="https://via.placeholder.com/150x150">
+          <div id="memberInfo">
+            <h2>Name</h2>
+            <h3>（漫画）</h3>
+            <div id="memberSites">
+              <a href="#" class="icons"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="icons"><div id="pixiv">p</div></a>
+            </div>
+          </div>
+        </div>
+        <div id="member">
+          <img class="img-responsive" src="https://via.placeholder.com/150x150">
+          <div id="memberInfo">
+            <h2>Name</h2>
+            <h3>（漫画）</h3>
+            <div id="memberSites">
+              <a href="#" class="icons"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="icons"><div id="pixiv">p</div></a>
+            </div>
+          </div>
+        </div>
+        <div id="member">
+          <img class="img-responsive" src="https://via.placeholder.com/150x150">
+          <div id="memberInfo">
+            <h2>Name</h2>
+            <h3>（漫画）</h3>
+            <div id="memberSites">
+              <a href="#" class="icons"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="icons"><div id="pixiv">p</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="member">
+          <img class="img-responsive" src="https://via.placeholder.com/150x150">
+          <div id="memberInfo">
+            <h2>Name</h2>
+            <h3>（漫画）</h3>
+            <div id="memberSites">
+              <a href="#" class="icons"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="icons"><div id="pixiv">p</div></a>
+            </div>
+          </div>
+        </div>
+        <div id="member">
+          <img class="img-responsive" src="https://via.placeholder.com/150x150">
+          <div id="memberInfo">
+            <h2>Name</h2>
+            <h3>（漫画）</h3>
+            <div id="memberSites">
+              <a href="#" class="icons"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="icons"><div id="pixiv">p</div></a>
+            </div>
+          </div>
+        </div>
+        <div id="member">
+          <img class="img-responsive" src="https://via.placeholder.com/150x150">
+          <div id="memberInfo">
+            <h2>Name</h2>
+            <h3>（小説）</h3>
+            <div id="memberSites">
+              <a href="#" class="icons"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="icons"><div id="pixiv">p</div></a>
+            </div>
+          </div>
+        </div>
+        <div id="member">
+          <img class="img-responsive" src="https://via.placeholder.com/150x150">
+          <div id="memberInfo">
+            <h2>Name</h2>
+            <h3>（漫画）</h3>
+            <div id="memberSites">
+              <a href="#" class="icons"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="icons"><div id="pixiv">p</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="member">
+          <img class="img-responsive" src="https://via.placeholder.com/150x150">
+          <div id="memberInfo">
+            <h2>Name</h2>
+            <h3>（漫画）</h3>
+            <div id="memberSites">
+              <a href="#" class="icons"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="icons"><div id="pixiv">p</div></a>
+            </div>
+          </div>
+        </div>
+        <div id="member">
+          <img class="img-responsive" src="https://via.placeholder.com/150x150">
+          <div id="memberInfo">
+            <h2>Name</h2>
+            <h3>（漫画）</h3>
+            <div id="memberSites">
+              <a href="#" class="icons"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="icons"><div id="pixiv">p</div></a>
+            </div>
+          </div>
+        </div>
+        <div id="member">
+          <img class="img-responsive" src="https://via.placeholder.com/150x150">
+          <div id="memberInfo">
+            <h2>Name</h2>
+            <h3>（漫画）</h3>
+            <div id="memberSites">
+              <a href="#" class="icons"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="icons"><div id="pixiv">p</div></a>
+            </div>
+          </div>
+        </div>
+        <div id="member">
+          <img class="img-responsive" src="https://via.placeholder.com/150x150">
+          <div id="memberInfo">
+            <h2>Name</h2>
+            <h3>（漫画・主催）</h3>
+            <div id="memberSites">
+              <a href="#" class="icons"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="icons"><div id="pixiv">p</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="full-screen grey">
+  <div>
+    <h1>Contact</h1>
+    <h4>アンソロジーに関するお問い合わせは下記のアドレス
+      またはメールフォームをご活用下さい。</h4>
+    <div id="contactInfo">
+      <h4>主催: Name</h4>
+      <p><a id="switch" href="#" data-hover="Email先">Email</a></p>
+      <p><a id="switch" href="#" data-hover="@Placeholder">Twitter</a></p>
+    </div>
+    <div class="row">
+      <form>
+        <fieldset class="form-group">
+          <input type="email" class="form-control" id="exampleInputName1" placeholder="お名前">
+        </fieldset>
+        <fieldset class="form-group">
+          <input type="text" class="form-control" id="exampleInputEmail1" placeholder="メールアドレス">
+        </fieldset>
+        <fieldset class="form-group">
+          <input type="text" class="form-control" id="exampleInputName2" placeholder="件名">
+        </fieldset>
+        <fieldset class="form-group">
+          <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="本文"></textarea>
+        </fieldset>
+        <button type="submit" class="btn btn-primary center-block">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+</div>
